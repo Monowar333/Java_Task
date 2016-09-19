@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>uits.jv1503</groupId>
+        <artifactId>HospitaWeb-Spring</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>korkh.task</groupId>
+    <artifactId>Akvelon</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Akvelon-Domain</module>
+        <module>Akvelon-Servise</module>
+       <module>Akvelon-Web</module>
+
+    </modules>
+</project>

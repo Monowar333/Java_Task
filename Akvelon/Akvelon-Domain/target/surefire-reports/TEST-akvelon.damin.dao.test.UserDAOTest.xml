@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="akvelon.damin.dao.test.UserDAOTest" time="8.325" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="akvelon.damin.dao.test.UserDAOTest" time="6.494" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_51\jre\bin"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Жека\Documents\NetBeansProjects\HospitaWeb-Spring\Akvelon\Akvelon-Domain"/>
+    <property name="user.dir" value="C:\Users\Жека\Documents\NetBeansProjects\HospitaWeb-Spring\Akvelon"/>
     <property name="java.runtime.version" value="1.8.0_51-b16"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_51\jre\lib\endorsed"/>
@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
   <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_02_getByIdTest" time="0.063"/>
-  <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_04_insertUpdate" time="0.156"/>
-  <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_03_getList" time="0.031"/>
-  <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_01_saveUsertest" time="0.078"/>
+  <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_04_insertUpdate" time="0.141"/>
+  <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_03_getList" time="0.016"/>
+  <testcase classname="akvelon.damin.dao.test.UserDAOTest" name="step_01_saveUsertest" time="0.125"/>
 </testsuite>

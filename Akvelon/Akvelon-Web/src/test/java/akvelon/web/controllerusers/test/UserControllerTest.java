@@ -8,6 +8,7 @@ package akvelon.web.controllerusers.test;
 import akvelon.domain.Users;
 import akvelon.service.UsersService;
 import akvelon.web.userscomtroller.UsersController;
+import akvelon.web.validate.UsersValidate;
 import static org.mockito.Matchers.any;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -24,6 +25,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import org.springframework.validation.Errors;
 
 
 //@RunWith(SpringJUnit4ClassRunner.class)
@@ -32,6 +34,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class UserControllerTest {
     @Mock
     private UsersService usersService;
+    
+    @Mock
+    private UsersValidate usersValidate;
  
     @InjectMocks
     private UsersController userController = new UsersController();
@@ -84,43 +89,40 @@ public class UserControllerTest {
             .andExpect(forwardedUrl("addupdateuser"));
     }
     
-//     @Test
-//    public void updateUserTest() throws Exception {
-////        Users o = new Users();
-////        o.setId(5);
-////        when(usersService.update(o)).t;
-//        mockMvc.perform(post("/saveuser")
-//            .param("id","5")
-//            .param("date","2016-09-13 23:08:44.0")
-//            .param("name", "Yevhen")
-//            .param("username", "Admin")
-//            .param("statusregistr", "true")
-//            .param("password", "Admin")
-//            .param("role", "Admin")
-//            .param("age", "24")
-//            .param("weight", "81.300"))
-//            .andExpect(status().isOk())
-//            .andExpect(view().name("redirect:/startpage"));
-//    }
-//    
-//     @Test
-//    public void saveUserTest() throws Exception {
+     @Test
+    public void updateUserTest() throws Exception {
+        mockMvc.perform(post("/saveuser")
+            .param("id","5")
+            .param("date","2016-09-13 23:08:44.0")
+            .param("name", "Yevhen")
+            .param("username", "Admin")
+            .param("statusregistr", "true")
+            .param("password", "Admin")
+            .param("role", "Admin")
+            .param("age", "24")
+            .param("weight", "81.300"))
+            .andExpect(status().is(302))
+            .andExpect(view().name("redirect:/startpage"));
+    }
+    
+     @Test
+    public void saveUserTest() throws Exception {
 //        Users o = new Users();
 //        o.setId(5);
-//       when(usersService.save(any(Users.class))).thenReturn(5);
-//        mockMvc.perform(post("/savenewuser")
-//            .param("id","null")
-//            .param("date","2016-09-13 23:08:44.0")
-//            .param("name", "Yevhen")
-//            .param("username", "Admin")
-//            .param("statusregistr", "true")
-//            .param("password", "Admin")
-//            .param("role", "Admin")
-//            .param("age", "24")
-//            .param("weight", "81.3"))
-//            .andExpect(status().isOk())
-//            .andExpect(forwardedUrl("addupdateuser"));
-//    }
+      // when(usersValidate.validate((Users.class, Errors.class)));
+       when(usersService.save(any(Users.class))).thenReturn(5);
+        mockMvc.perform(post("/savenewuser")
+            .param("date","2016-09-13 23:08:44.0")
+            .param("name", "Yevhen")
+            .param("username", "Admin")
+            .param("statusregistr", "true")
+            .param("password", "Admin")
+            .param("role", "Admin")
+            .param("age", "24")
+            .param("weight", "81.3"))
+            .andExpect(status().is(302))
+            .andExpect(view().name("redirect:/startpage"));
+    }
 }
     
     
